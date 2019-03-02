@@ -634,7 +634,7 @@ NS_INLINE void INApplyClippingPathInCurrentContext(CGPathRef path) {
 #pragma mark -
 #pragma mark Initialization
 
-- (id)initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)aStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag
+- (id)initWithContentRect:(NSRect)contentRect styleMask:(NSWindowStyleMask)aStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag
 {
 	if ((self = [super initWithContentRect:contentRect styleMask:aStyle backing:bufferingType defer:flag])) {
 		[self _doInitialWindowSetup];
@@ -642,7 +642,7 @@ NS_INLINE void INApplyClippingPathInCurrentContext(CGPathRef path) {
 	return self;
 }
 
-- (id)initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)aStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag screen:(NSScreen *)screen
+- (id)initWithContentRect:(NSRect)contentRect styleMask:(NSWindowStyleMask)aStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag screen:(NSScreen *)screen
 {
 	if ((self = [super initWithContentRect:contentRect styleMask:aStyle backing:bufferingType defer:flag screen:screen])) {
 		[self _doInitialWindowSetup];
@@ -1014,7 +1014,7 @@ NS_INLINE void INApplyClippingPathInCurrentContext(CGPathRef path) {
 	return nil;
 }
 
-- (void)setStyleMask:(NSUInteger)styleMask
+- (void)setStyleMask:(NSWindowStyleMask)styleMask
 {
 	_preventWindowFrameChange = YES;
 
